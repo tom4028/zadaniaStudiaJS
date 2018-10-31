@@ -15,8 +15,6 @@ const tablica = [1,6,23,8,4,98,3,7,3,98,4,98,7,6,7,19,20,11];
 function reverseArr(arr){
     let arrReverse = [];
     for(let i=arr.length-1;i>=0;i--){
-        // let lastElement = arr.pop();
-        // console.log(lastElement);
         arrReverse.push(arr.pop());
     }
     return arrReverse;
