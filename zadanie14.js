@@ -1,2 +1,25 @@
-const tablica = [1,6,23,8,4,98,3,7,3,98,4,98,7,6,7,19,20,11];
+const os = require("os");
+let objects = [{
+    id:1,
+    show:function(){
+        console.log(os.cpus());
+    }
+},{
+    id:2
+},{
+    id:3,
+    show:function(){
+        console.log(os.type());
+    }
+}];
 
+function showObject(arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].hasOwnProperty('show')){
+            arr[i].show();
+        }else{
+        console.log("Error: Ten object nie ma funkcji show");
+        }
+    }
+};
+showObject(objects);
